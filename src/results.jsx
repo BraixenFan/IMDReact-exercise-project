@@ -11,6 +11,7 @@ const Results = ({ movies }) => {
           return (
             <IndMovie
               name={movie.title}
+              description={movie.description}
               key={movie.id}
               fetchLink={movie.id}
               image={movie.image}

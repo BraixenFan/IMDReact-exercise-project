@@ -15,7 +15,7 @@ const IndMovie = (props) => {
       </div>
       <div className="info">
         <h1>{name}</h1>
-        <h2>{`${description} — ${fetchLink}`}</h2>
+        <h2>{`${description}`}</h2>
       </div>
     </Link>
   );
