@@ -37,3 +37,84 @@ root{
   text-decoration: none;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.search-params{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.search-params input{
+  font-size: 2em;
+  padding: 0.5em;
+  border-radius: 25px;
+  color: #333;
+  margin-left: 50px;
+}
+
+.search-params button{
+  height: 100%;
+  font-size: 2em;
+  border-radius: 50%;
+  padding: 0.5em;
+  transform: translate(-60%);
+}
+
+.search-params h1{
+  display: block;
+}
+
+.movie {
+  width: 100%;
+  height: 200px;
+  display: block;
+  overflow: hidden;
+  margin: 25px 0;
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.info {
+  float: left;
+  width: 80%;
+  height: 200px;
+  padding-top: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.image-container {
+  width: 100px;
+  height: 200px;
+  float: left;
+}
+
+.image-container img{
+  width: 800%;
+}
+
+.movie h1 {
+  white-space: nowrap;
+  font-weight: normal;
+  font-size: 50px;
+  text-decoration: solid;
+  width: 95%;
+  overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.movie h2 {
+  white-space: nowrap;
+  font-weight: normal;
+  font-size: 30px;
+  width: 95%;
+  overflow: hidden;
+  margin: 0;
+  text-overflow: ellipsis;
+  text-align: left;
+}

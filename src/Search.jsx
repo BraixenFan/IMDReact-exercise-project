@@ -23,16 +23,13 @@ const SearchParams = () => {
           setRequestParams(obj);
         }}
       >
-        <label htmlFor="nameFilm">
-          Movie
-          <input
-            id="nameFilm"
-            name="nameFilm"
-            placeholder="What movie do you want to look at?"
-          />
-        </label>
+        <input
+          id="nameFilm"
+          name="nameFilm"
+          placeholder="What movie do you want to look at?"
+        />
 
-        <button>Submit</button>
+        <button>🔍</button>
       </form>
       <Results movies={movies} />
     </div>

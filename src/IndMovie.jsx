@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 
 const IndMovie = (props) => {
-  const { name, description, fetchLink, image, id } = props;
+  const { name, description, fetchLink, image } = props;
 
   let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
-  if (image.length) {
-    hero = image[0];
+  if (image !== null) {
+    hero = image;
   }
 
   return (
-    <Link to={`/details/${id}`} className="movie">
+    <Link to={`/details/${fetchLink}`} className="movie">
       <div className="image-container">
-        <img src={hero} alt={name} />
+        <img src={hero} alt="" />
       </div>
       <div className="info">
         <h1>{name}</h1>
