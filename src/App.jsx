@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Details from "./details";
 import SearchParams from "./Search";
 
 const queryClient = new QueryClient({
@@ -22,6 +23,7 @@ const App = () => {
             <h2>Discover and help others discover too!</h2>
           </header>
           <Routes>
+            <Route path="/details/:id" element={<Details />} />
             <Route path="/" element={<SearchParams />} />
           </Routes>
         </QueryClientProvider>

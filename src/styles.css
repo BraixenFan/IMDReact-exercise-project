@@ -127,3 +127,24 @@ root{
   margin: 0;
   text-align: center;
 }
+
+.details{
+  background-color: #111;
+  margin: 30px 30px;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.details h1{
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.image-poster{
+  width: 300px;
+}
+
+.detailed-view{
+  display: flex;
+  gap: 20px;
+}
