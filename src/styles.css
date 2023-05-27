@@ -148,3 +148,31 @@ root{
   display: flex;
   gap: 20px;
 }
+
+.detailed-view div{
+  max-width: 700px;
+}
+
+.userReview{
+  overflow-wrap: break-word;
+  overflow-x: scroll;
+  line-break: normal;
+  white-space: pre;
+  height: 200px;
+}
+
+.detailed-view label, textarea{
+  display: block;
+}
+
+.detailed-view textarea{
+  color: #333;
+  height: 300px;
+  width: 100%;
+  font-size: 1em;
+}
+
+.detailed-view button{
+  color: #333;
+  float: right;
+}
