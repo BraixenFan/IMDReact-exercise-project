@@ -31,7 +31,7 @@ const SearchParams = () => {
 
         <button>🔍</button>
       </form>
-      <Results movies={movies} />
+      <Results fetchStatus={results} movies={movies} />
     </div>
   );
 };

@@ -1,11 +1,17 @@
 import IndMovie from "./IndMovie";
 
-const Results = ({ movies }) => {
-  console.log(movies);
+const Results = ({ movies, fetchStatus }) => {
+  if (fetchStatus.isLoading) {
+    return (
+      <div className="loading-pane">
+        <h2 className="loader">Loading...</h2>
+      </div>
+    );
+  }
   return (
     <div className="search">
       {!movies.length ? (
-        <h1 className="failed-fetch">No results were found</h1>
+        <h2 className="failed-fetch">No results were found</h2>
       ) : (
         movies.map((movie) => {
           return (
