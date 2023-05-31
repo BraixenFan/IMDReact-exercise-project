@@ -48,6 +48,7 @@ root{
 }
 
 .search-params input{
+  margin-bottom: 20px;
   font-size: 2em;
   padding: 0.5em;
   border-radius: 25px;
@@ -71,7 +72,6 @@ root{
   display: block;
   overflow: hidden;
   height: 500px;
-  margin: 25px 0;
   background-color: #555;
   border-radius: 10px;
 }
@@ -111,7 +111,7 @@ root{
 .search {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px 20px;
+  gap: 20px 10px;
 }
 
 .movie h1 {
@@ -175,4 +175,57 @@ root{
 .detailed-view button{
   color: #333;
   float: right;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .search{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 50em) {
+  .search{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detailed-view{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 30em) {
+  .search-params input{
+    margin-left: 0;
+  }
+
+  .search-params{
+    margin: auto;
+  }
+
+}
+
+@media (max-width: 27em) {
+  .search{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 25em) {
+  .search-params input{
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 24em) {
+  .search-params input{
+    margin-left: -30px;
+  }
 }
