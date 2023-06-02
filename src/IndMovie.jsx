@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 const IndMovie = (props) => {
   const { name, description, fetchLink, image } = props;
+  const DescEscap = unescape(description);
 
   let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
   if (image !== null) {
@@ -15,7 +16,7 @@ const IndMovie = (props) => {
       </div>
       <div className="info">
         <h1>{name}</h1>
-        <h2>{`${description}`}</h2>
+        <h2>{`${DescEscap}`}</h2>
       </div>
     </Link>
   );
