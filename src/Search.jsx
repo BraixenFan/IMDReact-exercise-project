@@ -23,11 +23,7 @@ const SearchParams = () => {
           setRequestParams(obj);
         }}
       >
-        <input
-          id="nameFilm"
-          name="nameFilm"
-          placeholder="What movie do you want to look at?"
-        />
+        <input id="nameFilm" name="nameFilm" placeholder="Search for movies" />
 
         <button>🔍</button>
       </form>
