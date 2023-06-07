@@ -114,6 +114,16 @@ root{
   gap: 20px 10px;
 }
 
+.Review-Box{
+  margin: 20px 20px;
+}
+
+.Review-Ind{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px 10px;
+}
+
 .movie h1 {
   font-size: 50px;
   text-decoration: solid;

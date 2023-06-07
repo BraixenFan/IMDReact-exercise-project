@@ -17,8 +17,18 @@ const Details = () => {
     );
   }
 
+  console.log(id);
+
   const movie = results.data.short;
   const review = localStorage.getItem(id);
+  let rReviewDB = localStorage.getItem("PastReviews");
+
+  console.log(id);
+
+  if (rReviewDB == null) {
+    localStorage.setItem("PastReviews", "");
+    rReviewDB = "";
+  }
 
   if (review != null) {
     return (
@@ -53,6 +63,7 @@ const Details = () => {
                     id,
                     formData.get("userReview").toString() ?? null
                   );
+                  localStorage.setItem("PastReviews", rReviewDB + "," + id);
                   navigate(0);
                 }}
               >
