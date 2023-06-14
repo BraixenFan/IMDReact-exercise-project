@@ -25,12 +25,22 @@ root{
   padding: 50px 0px 0px 0px;
 }
 
-.main-page h2{
+.BreadCrumb-NavBar {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.BreadCrumb-NavBar a, .BreadCrumb-NavBar span {
+  font-size: inherit;
+}
+
+.main-page header h2{
   text-align: center;
   display: block;
 }
 
-.main-page a{
+.main-page header a{
   display: block;
   text-align: center;
   font-size: 8em;
@@ -90,6 +100,10 @@ root{
   
   transition-property: background-color;
   transition-duration: 2s;
+}
+
+.loader {
+  text-align: center;
 }
 
 .image-container {

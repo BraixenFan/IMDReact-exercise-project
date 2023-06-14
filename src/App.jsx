@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Details from "./details";
 import SearchParams from "./Search";
+import Breadcrumbs from "./Breadcrumbs";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -22,6 +23,7 @@ const App = () => {
             <Link to="/">LocalMDb</Link>
             <h2>Discover and help others discover too!</h2>
           </header>
+          <Breadcrumbs />
           <Routes>
             <Route path="/details/:id" element={<Details />} />
             <Route path="/" element={<SearchParams />} />
