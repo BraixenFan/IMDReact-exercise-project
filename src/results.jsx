@@ -1,6 +1,13 @@
 import IndMovie from "./IndMovie";
+import { useSearchParams } from "react-router-dom";
 
-const Results = ({ movies, fetchStatus }) => {
+const Results = ({ movies, fetchStatus, search }) => {
+  const [searchParams, setSearchParams] = useSearchParams({});
+
+  if (search != "" && searchParams.get("q") != search) {
+    setSearchParams({ q: search });
+  }
+
   if (fetchStatus.isLoading) {
     return (
       <div className="loading-pane">
@@ -10,7 +17,7 @@ const Results = ({ movies, fetchStatus }) => {
   }
   return (
     <div className="search">
-      {!movies.length ? (
+      {!movies.length && search != "" ? (
         <h2 className="failed-fetch">No results were found</h2>
       ) : (
         movies.map((movie) => {
@@ -21,6 +28,7 @@ const Results = ({ movies, fetchStatus }) => {
               key={movie.id}
               fetchLink={movie.id}
               image={movie.image}
+              PreviSearch={search}
             />
           );
         })

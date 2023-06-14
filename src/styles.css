@@ -114,6 +114,12 @@ root{
   gap: 20px 10px;
 }
 
+.backButton {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 .Review-Box{
   margin: 20px 20px;
 }

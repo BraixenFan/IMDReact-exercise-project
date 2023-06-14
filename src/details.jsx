@@ -8,6 +8,9 @@ const Details = () => {
   const results = useQuery(["details", id], fetchMovie);
 
   const navigate = useNavigate();
+  const pageBack = () => {
+    navigate(-1);
+  };
 
   if (results.isLoading) {
     return (
@@ -29,6 +32,9 @@ const Details = () => {
   if (review != null) {
     return (
       <div className="details">
+        <button className="backButton" onClick={pageBack}>
+          ⬅ Back
+        </button>
         <div>
           <h1>{movie.name}</h1>
           <div className="detailed-view">
@@ -40,11 +46,15 @@ const Details = () => {
             </div>
           </div>
         </div>
+        <button>Back</button>
       </div>
     );
   } else {
     return (
       <div className="details">
+        <button className="backButton" onClick={pageBack}>
+          ⬅ Back
+        </button>
         <div>
           <h1>{movie.name}</h1>
           <div className="detailed-view">

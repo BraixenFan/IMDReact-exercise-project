@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const IndMovie = (props) => {
-  const { name, description, fetchLink, image } = props;
+  const { name, description, fetchLink, PreviSearch, image } = props;
   const DescEscap = unescape(description);
 
   let hero = "http://pets-images.dev-apis.com/pets/none.jpg";
@@ -10,7 +10,7 @@ const IndMovie = (props) => {
   }
 
   return (
-    <Link to={`/details/${fetchLink}`} className="movie">
+    <Link to={`/details/${fetchLink}?q=${PreviSearch}`} className="movie">
       <div className="image-container">
         <img src={hero} alt="" />
       </div>
