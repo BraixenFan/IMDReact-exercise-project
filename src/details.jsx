@@ -17,13 +17,9 @@ const Details = () => {
     );
   }
 
-  console.log(id);
-
   const movie = results.data.short;
   const review = localStorage.getItem(id);
   let rReviewDB = localStorage.getItem("PastReviews");
-
-  console.log(id);
 
   if (rReviewDB == null) {
     localStorage.setItem("PastReviews", "");
