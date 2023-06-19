@@ -17,7 +17,9 @@ const queryClient = new QueryClient({
 const App = () => {
   return (
     <div className="main-page">
-      <BrowserRouter>
+      <BrowserRouter
+        basename={import.meta.env.DEV ? "/" : "/IMDReact-exercise-project/"}
+      >
         <QueryClientProvider client={queryClient}>
           <header>
             <Link to="/">LocalMDb</Link>
